@@ -1,0 +1,22 @@
+---
+import Banner from "../components/Banner.astro";
+import Layout from "../layouts/DefaultLayout.astro";
+---
+
+<Layout>
+  <Banner />
+  <header class="text-center py-4">
+    <h1 class="text-3xl font-bold">LE CLUB DE LA BD</h1>
+    <button onclick="switchTheme()" id="switch-label">THÈME CLUB</button>
+  </header>
+  <main class="p-4">
+    <section>
+      <h2 class="text-xl font-semibold">À la une</h2>
+      <article>
+        <h3>Les États-Unis en BD</h3>
+        <p>Notre sélection spéciale Americana !</p>
+        <a href="/blog/usa">Lire l'article</a>
+      </article>
+    </section>
+  </main>
+</Layout>

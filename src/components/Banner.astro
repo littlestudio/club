@@ -1,0 +1,29 @@
+---
+const now = new Date();
+const day = now.getDay();
+const hour = now.getHours();
+const isOpen = (
+  (day >= 2 && day <= 6 && ((hour >= 10 && hour < 12) || (hour >= 14 && hour < 18))) ||
+  (day === 0 && hour >= 14 && hour < 18)
+);
+---
+
+<div class="banner {isOpen ? 'open' : 'closed'}">
+  Le magasin est {isOpen ? "ouvert" : "fermé"}
+</div>
+
+<style>
+  .banner {
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  .open {
+    background-color: #00cc66;
+    color: white;
+  }
+  .closed {
+    background-color: #cc0000;
+    color: white;
+  }
+</style>
